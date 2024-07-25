@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Button from "../components/Button"; // Asegúrate de que Button esté correctamente implementado
+import Button from "../components/Button";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,17 +13,17 @@ export default function Nav() {
 
   return (
     <nav className="bg-transparent w-full py-3">
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
+      <div className="container mx-auto grid grid-cols-4 md:grid-cols-4 items-center gap-4">
         {/* Logo or title */}
-        <div className="flex items-center">
+        <div className="flex flex-initial items-center">
           <div className="font-bold text-xl">BrandName</div>
         </div>
 
         {/* hamburguer button */}
-        <div className="block md:hidden">
+        <div className="block md:hidden col-span-3 md:col-span-3 justify-self-end">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="focus:outline-none"
             aria-label="Toggle menu"
           >
             <svg
@@ -45,11 +45,11 @@ export default function Nav() {
 
         {/* nav */}
         <div
-          className={`md:flex md:items-center md:w-auto ${
-            isOpen ? "block" : "hidden"
+          className={`col-span-3 md:col-span-3 md:flex md:items-center md:justify-between ${
+            isOpen ? "block bg-[#08184d] rounded-lg w-full pb-4" : "hidden"
           }`}
         >
-          <div className="flex flex-col md:flex-row md:space-x-6 w-full md:w-auto">
+          <div className="grid md:flex md:space-x-6 w-full md:w-auto">
             <Link
               href="#"
               className="block md:inline-block py-2 px-4 mt-4 md:mt-0"
