@@ -14,12 +14,12 @@ export default function Nav() {
   return (
     <nav className="bg-transparent w-full py-3">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
-        {/* Logo o Título */}
+        {/* Logo or title */}
         <div className="flex items-center">
           <div className="font-bold text-xl">BrandName</div>
         </div>
 
-        {/* Botón de Menú Hamburguesa (visible en pantallas pequeñas) */}
+        {/* hamburguer button */}
         <div className="block md:hidden">
           <button
             onClick={toggleMenu}
@@ -43,13 +43,12 @@ export default function Nav() {
           </button>
         </div>
 
-        {/* Menú de Navegación */}
+        {/* nav */}
         <div
           className={`md:flex md:items-center md:w-auto ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          {/* Enlaces de Navegación */}
           <div className="flex flex-col md:flex-row md:space-x-6 w-full md:w-auto">
             <Link
               href="#"
@@ -77,7 +76,6 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Botones */}
           <div className="mt-4 md:ml-6 md:mt-0 md:flex space-x-3">
             <Button
               label="Login"
