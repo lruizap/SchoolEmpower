@@ -3,6 +3,8 @@
 interface ButtonProps {
   label: string;
   border?: string;
+  rounded?: string;
+  textColor?: string;
   background?: string;
   capitalize?: boolean;
   arrow?: boolean;
@@ -12,6 +14,8 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   label,
   border = "border border-[#8D5CF6]",
+  rounded = "rounded-none",
+  textColor = "color-white",
   background = "bg-[#8D5CF6]",
   capitalize = false,
   arrow = false,
@@ -20,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-4 rounded ${border} ${background} ${
+      className={`px-4 py-4 rounded ${textColor} ${rounded} ${border} ${background} ${
         capitalize ? "uppercase" : ""
       }`}
     >
