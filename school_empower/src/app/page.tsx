@@ -7,40 +7,35 @@ import "./styles/global.css";
 import Nav from "./components/Nav";
 import Button from "./components/Button";
 import CardCourse from "./components/CardCourse";
-import CardPackages from "./components/CardPackages";
+import CourseCarousel from "./components/CarouselPackages";
 
 export default function Home() {
   return (
     <body className="gird grid-cols justify-center items-center min-h-screen">
       {/* Background Images */}
-
       <div className="relative w-full h-full">
         <Image
           alt="Pink Rectangle Background"
           src="/img/Rectangle_4.png"
           width={530}
           height={271}
-          className="absolute top-0 right-0 z-[-1] w-[50%] md:w-[40%] lg:w-[30%] h-auto"
+          className="absolute top-0 right-0 z-[-1] w-[40%] md:w-[40%] lg:w-[30%] h-auto "
         />
         <Image
           alt="Pink Rectangle Background"
           src="/img/Rectangle_5.png"
           width={910}
           height={778}
-          className="absolute top-0 left-0 z-[-1] w-[80%] md:w-[60%] lg:w-[58%] h-auto"
+          className="absolute top-0 left-0 z-[-1] w-[60%] md:w-[60%] lg:w-[58%] h-auto"
         />
       </div>
-
       {/* Nav */}
-
       <header className="grid p-6">
         <Nav />
       </header>
-
       {/* Join Us */}
-
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center w-full lg:mb-40">
-        <div className="container size-1/2 justify-center text-left m-4">
+        <div className="container size-min justify-center text-left m-4">
           <p className="text-lg pb-5">Join Us</p>
           <h1 className="text-6xl font-bold my-4 pb-5 text-balance">
             25K+ STUDENTS TRUST US
@@ -63,9 +58,7 @@ export default function Home() {
           />
         </div>
       </section>
-
       {/* Most popular courses */}
-
       <section className="grid grid-flow-row my-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
           <div className="grid grid-rows-1">
@@ -100,7 +93,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Our Popular Courses */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 my-40 w-full md:py-10">
         <div className="flex container justify-center items-center m-4">
@@ -139,9 +131,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Approdable Packages */}
-      <section className="grid grid-flow-row my-40 w-full md:py-10">
+      <section className="grid grid-flow-row mt-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
           <div className="grid grid-rows-1">
             <p className="text-[#8D5CF6] text-lg font-semibold">
@@ -155,28 +146,14 @@ export default function Home() {
               realms of Classical physics: Newtonian mechanics
             </p>
           </div>
-          <div className="grid">
-            <CardPackages
-              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
-              image="/img/product-cover-1.png"
-              price="16,48"
-              rating="4,9"
-              salePrice="6,48"
-              sales="15"
-              title="Training Courses"
-            ></CardPackages>
-            <CardPackages
-              description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
-              image="/img/product-cover-1.png"
-              price="16,48"
-              rating="4,9"
-              salePrice="6,48"
-              sales="15"
-              title="Training Courses"
-            ></CardPackages>
-          </div>
         </div>
       </section>
+
+      <div className="grid place-items-center mb-40 md:py-10">
+        <div className="md:max-w-3xl max-w-sm">
+          <CourseCarousel />
+        </div>
+      </div>
     </body>
   );
 }

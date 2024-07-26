@@ -27,12 +27,12 @@ const CardPackages: React.FC<CardPackagesProps> = ({
   sales,
 }) => {
   return (
-    <div className="bg-white shadow-md w-[348px]">
+    <div className="bg-white shadow-md">
       <div className="relative">
         <Image
           src={image}
           alt={title}
-          className="w-full h-40 object-cover"
+          className="object-cover"
           width={400}
           height={160}
         />
