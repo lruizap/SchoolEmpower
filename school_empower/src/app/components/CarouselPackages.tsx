@@ -1,3 +1,5 @@
+// components/CarouselPackages.tsx
+
 "use client";
 import Slider from "react-slick";
 
@@ -116,7 +118,7 @@ const CourseCarousel = () => {
       <Slider {...settings}>
         {packages.map((pack, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="p-2">
               <CardPackages
                 image={pack.image}
                 title={pack.title}

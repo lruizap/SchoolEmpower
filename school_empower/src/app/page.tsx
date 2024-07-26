@@ -6,6 +6,7 @@ import "./styles/global.css";
 // Components
 import Nav from "./components/Nav";
 import Button from "./components/Button";
+import Section from "./components/Section";
 import CardCourse from "./components/CardCourse";
 import CourseCarousel from "./components/CarouselPackages";
 
@@ -61,18 +62,12 @@ export default function Home() {
       {/* Most popular courses */}
       <section className="grid grid-flow-row my-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
-          <div className="grid grid-rows-1">
-            <p className="text-[#8D5CF6] text-lg font-semibold">
-              Practice Advice
-            </p>
-            <h2 className="text-4xl font-bold my-4 pb-5">
-              Most Popular Courses
-            </h2>
-            <p className="text-balance">
-              Problems trying to resolve the conflict between the two major
-              realms of Classical physics: Newtonian mechanics
-            </p>
-          </div>
+          <Section
+            label="Practice Advice"
+            title="Most Popular Courses"
+            description="Problems trying to resolve the conflict between 
+the two major realms of Classical physics: Newtonian mechanics "
+          />
           <div className="grid grid-rows-1 justify-center items-center -my-5">
             <div className="grid md:grid-cols-2 md:space-x-6 md:space-y-0 space-y-6">
               <div className="flex justify-center">
@@ -134,18 +129,12 @@ export default function Home() {
       {/* Approdable Packages */}
       <section className="grid grid-flow-row mt-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
-          <div className="grid grid-rows-1">
-            <p className="text-[#8D5CF6] text-lg font-semibold">
-              Practice Advice
-            </p>
-            <h2 className="text-4xl font-bold my-4 pb-5">
-              Affordable Packages
-            </h2>
-            <p className="text-balance">
-              Problems trying to resolve the conflict between the two major
-              realms of Classical physics: Newtonian mechanics
-            </p>
-          </div>
+          <Section
+            label="Practice Advice"
+            title="Affordable Packages"
+            description="Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics"
+          />
         </div>
       </section>
 
