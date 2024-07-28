@@ -58,21 +58,26 @@ Once the code was clean, I downloaded the first images, looked at the style guid
 
 ## Project Structure
 
+```markdown
 ├── .next/
 ├── node_modules/
 ├── public/
-│ └── img/
-│ └── svg/
+│   └── img/
+│       └── svg/
 ├── src/
-│ ├── app/
-│ │ ├── styles/
-│ │ │ ├── globals.css
-│ │ ├── components/
-│ │ │ └── Button.tsx
-│ │ │ └── Nav.tsx
-│ │ └── styles/
-│ │ └── layout.tsx
-│ │ └── page.tsx
+│   ├── app/
+│   │   ├── styles/
+│   │   │   ├── globals.css
+│   │   ├── components/
+│   │   │   └── Button.tsx
+│   │   │   └── CardCourse.tsx
+│   │   │   └── CardPackages.tsx
+│   │   │   └── CarouselPackages.tsx
+│   │   │   └── Nav.tsx
+│   │   │   └── Section.tsx
+│   │   └── styles/
+│   │       └── layout.tsx
+│   │       └── page.tsx
 ├── .eslintrc.json
 ├── .gitignore
 ├── .next-env.d.ts
@@ -86,6 +91,7 @@ Once the code was clean, I downloaded the first images, looked at the style guid
 ├── tsconfig.json
 ├── prueba-tecnica-desarrollo-web.pdf
 └── README.md
+```
 
 ## Running the Project Locally
 
