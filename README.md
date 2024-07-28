@@ -56,6 +56,27 @@ After this, I opened Figma and from the first moment I was clear that the order 
 
 Once the code was clean, I downloaded the first images, looked at the style guide provided in figma, changed the project font and started to create the website.
 
+After starting the project, I had the most difficulties in centring everything and making it responsive. Of all the sections, the nav and the first carousel were the most complex because I had to take into account several things to make it as specified in the design.
+
+To create the carousel and include the icons I had to install three dependencies:
+
+```bash
+npx install slick-carousel reack-slick react-icons
+```
+
+The carousel components are made with these dependencies.
+
+After this, I had a complication again in the Newsletter section, because the idea I had was to create a component that, as the design tells me, is an input to include the email and subscribe to the newsletter.
+
+But, the complication came when I wanted to include the Resend API to send an email to the input email to verify that you have subscribed to the newsletter.
+At the end the component is ready to be used in this way but pending the creation of a backend to be able to send the mail from there.
+
+To use this API I had to install the following dependency.
+
+```bash
+npx install resend
+```
+
 ## Project Structure
 
 ```markdown

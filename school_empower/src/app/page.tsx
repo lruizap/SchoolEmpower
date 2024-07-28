@@ -11,6 +11,7 @@ import CardCourse from "./components/CardCourse";
 import CourseCarousel from "./components/Packages/CarouselPackages";
 import ClientCarousel from "./components/Clients/ClientCarousel";
 import FAQSection from "./components/FAQ/FAQSection";
+import NewsletterForm from "./components/NewsletterForm";
 
 export default function Home() {
   return (
@@ -181,6 +182,21 @@ export default function Home() {
           <FAQSection />
         </div>
       </section>
+
+      {/* Newsletter */}
+
+      <section className="grid grid-flow-row mt-40 w-full md:py-10">
+        <div className="grid grid-rows-1 justify-center items-center text-center space-y-20 p-5">
+          <Section
+            label="Newsletter"
+            title="Get Quality Education"
+            description="Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics"
+          ></Section>
+          <NewsletterForm />
+        </div>
+      </section>
+
+      {/* Footer */}
     </body>
   );
 }
