@@ -8,7 +8,9 @@ import Nav from "./components/Nav";
 import Button from "./components/Button";
 import Section from "./components/Section";
 import CardCourse from "./components/CardCourse";
-import CourseCarousel from "./components/CarouselPackages";
+import CourseCarousel from "./components/Packages/CarouselPackages";
+import ClientCarousel from "./components/Clients/ClientCarousel";
+import FAQSection from "./components/FAQ/FAQSection";
 
 export default function Home() {
   return (
@@ -30,10 +32,12 @@ export default function Home() {
           className="absolute top-0 left-0 z-[-1] w-[60%] md:w-[60%] lg:w-[58%] h-auto"
         />
       </div>
+
       {/* Nav */}
       <header className="grid p-6">
         <Nav />
       </header>
+
       {/* Join Us */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center w-full lg:mb-40">
         <div className="container size-min justify-center text-left m-4">
@@ -59,14 +63,14 @@ export default function Home() {
           />
         </div>
       </section>
+
       {/* Most popular courses */}
       <section className="grid grid-flow-row my-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
           <Section
             label="Practice Advice"
             title="Most Popular Courses"
-            description="Problems trying to resolve the conflict between 
-the two major realms of Classical physics: Newtonian mechanics "
+            description="Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics "
           />
           <div className="grid grid-rows-1 justify-center items-center -my-5">
             <div className="grid md:grid-cols-2 md:space-x-6 md:space-y-0 space-y-6">
@@ -88,6 +92,7 @@ the two major realms of Classical physics: Newtonian mechanics "
           </div>
         </div>
       </section>
+
       {/* Our Popular Courses */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 my-40 w-full md:py-10">
         <div className="flex container justify-center items-center m-4">
@@ -114,7 +119,7 @@ the two major realms of Classical physics: Newtonian mechanics "
               Problems trying to resolve the conflict between the two major
               realms of Classical physics: Newtonian mechanics
             </p>
-            <div className="mt-4">
+            <div className="mt-4 -ml-4">
               <Button
                 label="Learn More"
                 textColor="text-[#8D5CF6]"
@@ -126,6 +131,7 @@ the two major realms of Classical physics: Newtonian mechanics "
           </div>
         </div>
       </section>
+
       {/* Approdable Packages */}
       <section className="grid grid-flow-row mt-40 w-full md:py-10">
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
@@ -143,6 +149,38 @@ the two major realms of Classical physics: Newtonian mechanics "
           <CourseCarousel />
         </div>
       </div>
+
+      {/* Clients */}
+
+      <section className="grid grid-flow-row mt-40 w-full md:py-10">
+        <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
+          <Section
+            label="Practice Advice"
+            title="Most Popular Courses"
+            description="Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics "
+          ></Section>
+        </div>
+      </section>
+
+      <div className="grid place-items-center mb-40 md:py-10">
+        <div className="md:max-w-3xl max-w-sm">
+          <ClientCarousel />
+        </div>
+      </div>
+
+      {/* FAQ */}
+
+      <section className="grid grid-flow-row mt-40 w-full md:py-10">
+        <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
+          <Section
+            title="FAQ"
+            description="Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics "
+          ></Section>
+        </div>
+        <div className="grid justify-center">
+          <FAQSection />
+        </div>
+      </section>
     </body>
   );
 }

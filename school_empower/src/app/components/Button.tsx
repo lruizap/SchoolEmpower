@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-4 rounded ${textColor} ${rounded} ${border} ${background} ${
+      className={`px-4 py-4 ${textColor} ${rounded} ${border} ${background} ${
         capitalize ? "uppercase" : ""
       }`}
     >

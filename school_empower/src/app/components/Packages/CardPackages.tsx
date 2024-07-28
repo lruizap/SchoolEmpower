@@ -1,11 +1,11 @@
-// components/CardPackages.tsx
+// components/Packages/CardPackages.tsx
 
 import Image from "next/image";
 import { FaDownload, FaStar } from "react-icons/fa";
 
 // Components
 
-import Button from "./Button";
+import Button from "../Button";
 
 interface CardPackagesProps {
   image: string;

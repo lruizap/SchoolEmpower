@@ -1,4 +1,4 @@
-// components/CarouselPackages.tsx
+// components/Packages/CarouselPackages.tsx
 
 "use client";
 import Slider from "react-slick";
