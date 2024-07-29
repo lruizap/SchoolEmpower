@@ -12,6 +12,7 @@ import CourseCarousel from "./components/Packages/CarouselPackages";
 import ClientCarousel from "./components/Clients/ClientCarousel";
 import FAQSection from "./components/FAQ/FAQSection";
 import NewsletterForm from "./components/NewsletterForm";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -40,7 +41,10 @@ export default function Home() {
       </header>
 
       {/* Join Us */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center w-full lg:mb-40">
+      <section
+        className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center w-full lg:mb-40"
+        id="home"
+      >
         <div className="container size-min justify-center text-left m-4">
           <p className="text-lg pb-5">Join Us</p>
           <h1 className="text-6xl font-bold my-4 pb-5 text-balance">
@@ -66,7 +70,10 @@ export default function Home() {
       </section>
 
       {/* Most popular courses */}
-      <section className="grid grid-flow-row my-40 w-full md:py-10">
+      <section
+        id="product"
+        className="grid grid-flow-row my-40 w-full md:py-10"
+      >
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
           <Section
             label="Practice Advice"
@@ -134,7 +141,10 @@ export default function Home() {
       </section>
 
       {/* Approdable Packages */}
-      <section className="grid grid-flow-row mt-40 w-full md:py-10">
+      <section
+        id="packages"
+        className="grid grid-flow-row mt-40 w-full md:py-10"
+      >
         <div className="grid grid-rows-1 justify-center items-center text-center gap-4 space-y-40 p-5">
           <Section
             label="Practice Advice"
@@ -197,6 +207,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
+
+      <div id="contact" className="grid grid-flow-row mt-40 w-full ">
+        <Footer />
+      </div>
     </body>
   );
 }

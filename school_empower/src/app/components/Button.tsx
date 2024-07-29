@@ -6,6 +6,7 @@ interface ButtonProps {
   rounded?: string;
   textColor?: string;
   background?: string;
+  hover?: string;
   capitalize?: boolean;
   arrow?: boolean;
   onClick?: () => void;
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   rounded = "rounded-none",
   textColor = "color-white",
   background = "bg-[#8D5CF6]",
+  hover = "hover:bg-[#5529b3]",
   capitalize = false,
   arrow = false,
   onClick,
@@ -24,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-4 ${textColor} ${rounded} ${border} ${background} ${
+      className={`px-4 py-4 ${textColor} ${rounded} ${border} ${background} ${hover} ${
         capitalize ? "uppercase" : ""
       }`}
     >

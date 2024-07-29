@@ -26,13 +26,17 @@ const ClientCard: React.FC<ClientProps> = ({
       <p className="m-5 text-balance text-black">{`${description}`}</p>
       <div className="rating-component">
         <div className="flex justify-center ">
-          {Array.from({ length: 5 }, (_, index) => (
-            <FaStar
-              key={index}
-              size={22.1}
-              color={index < rating ? "#ffc107" : "#e4e5e9"}
-            />
-          ))}
+          {
+            // to create FaStar and colour them according to the rating variable
+
+            Array.from({ length: 5 }, (_, index) => (
+              <FaStar
+                key={index}
+                size={22.1}
+                color={index < rating ? "#ffc107" : "#e4e5e9"}
+              />
+            ))
+          }
         </div>
       </div>
       <p className="mt-5 mb-2 font-bold text-balance text-black">{`${name}`}</p>

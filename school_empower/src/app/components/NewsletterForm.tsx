@@ -13,6 +13,7 @@ import Button from "./Button";
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API);
 
 // Redux
+// to validate that an e-mail has been entered
 
 const re =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -27,6 +28,7 @@ export default function NewsletterForm() {
     if (re.test(email)) {
       setError("");
       try {
+        // function to send a mail using Resend
         resend.emails.send({
           from: "onboarding@resend.dev",
           to: email,
@@ -55,7 +57,7 @@ export default function NewsletterForm() {
           name="newsletterInput"
           id="newsletter"
           placeholder="Your Email"
-          className="rounded-l-lg text-black min-w-full p-2"
+          className="rounded-l-lg text-black md:min-w-full p-2"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

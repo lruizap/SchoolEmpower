@@ -16,7 +16,11 @@ export default function Nav() {
       <div className="container mx-auto grid grid-cols-4 md:grid-cols-4 items-center gap-4">
         {/* Logo or title */}
         <div className="flex flex-initial items-center">
-          <div className="font-bold text-xl">BrandName</div>
+          <div className="font-bold text-xl">
+            <Link href="/" className="hover:text-[#8D5CF6]">
+              BrandName
+            </Link>
+          </div>
         </div>
 
         {/* hamburguer button */}
@@ -51,26 +55,26 @@ export default function Nav() {
         >
           <div className="grid md:flex md:space-x-6 w-full md:w-auto">
             <Link
-              href="#"
-              className="block md:inline-block py-2 px-4 mt-4 md:mt-0"
+              href="#home"
+              className="block md:inline-block py-2 px-4 mt-4 md:mt-0 hover:text-[#8D5CF6]"
             >
               Home
             </Link>
             <Link
-              href="#"
-              className="block md:inline-block py-2 px-4 mt-4 md:mt-0"
+              href="#product"
+              className="block md:inline-block py-2 px-4 mt-4 md:mt-0 hover:text-[#8D5CF6]"
             >
               Product
             </Link>
             <Link
-              href="#"
-              className="block md:inline-block py-2 px-4 mt-4 md:mt-0"
+              href="#packages"
+              className="block md:inline-block py-2 px-4 mt-4 md:mt-0 hover:text-[#8D5CF6]"
             >
               Pricing
             </Link>
             <Link
-              href="#"
-              className="block md:inline-block py-2 px-4 mt-4 md:mt-0"
+              href="#contact"
+              className="block md:inline-block py-2 px-4 mt-4 md:mt-0 hover:text-[#8D5CF6]"
             >
               Contact
             </Link>
@@ -80,7 +84,8 @@ export default function Nav() {
             <Button
               label="Login"
               border="border border-transparent"
-              background="bg-transparent text-white"
+              background="bg-transparent hover:text-[#8D5CF6]"
+              hover="none"
             />
             <Button label="Join Us" capitalize arrow />
           </div>
