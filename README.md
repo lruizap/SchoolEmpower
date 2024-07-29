@@ -77,32 +77,50 @@ To use this API I had to install the following dependency.
 npx install resend
 ```
 
+After all this, I finished creating the footer and finally, although I was not asked or specified, I made two modals, one for user registration and another for login and I put them to open when the nav buttons and those of the first section of the web are clicked.
+
+These modals are included for future implementations for a backend. They are prepared with validations so there are no problems.
+
+Once this is done, the project is finished and uploaded to github.
+
 ## Project Structure
 
 ```markdown
 ├── .next/
 ├── node_modules/
 ├── public/
-│   └── img/
-│       └── svg/
+│   ├── img/
+│   └── svg/
 ├── src/
 │   ├── app/
 │   │   ├── styles/
 │   │   │   ├── globals.css
 │   │   ├── components/
-│   │   │   └── Button.tsx
-│   │   │   └── CardCourse.tsx
-│   │   │   └── CardPackages.tsx
-│   │   │   └── CarouselPackages.tsx
-│   │   │   └── Nav.tsx
+│   │   │   └── Clients/
+│   │   │   │   ├──ClientCard.tsx
+│   │   │   │   └──ClientCarousel.tsx
+│   │   │   └── FAQ/
+│   │   │   │   ├──FAQ.tsx
+│   │   │   │   └──FAQSection.tsx
+│   │   │   └── Packages/
+│   │   │   │   ├──CardPackages.tsx
+│   │   │   │   └──CarouselPackages.tsx
+│   │   │   ├── Button.tsx
+│   │   │   ├── ButtonFirstSection.tsx
+│   │   │   ├── CardCourse.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Login.tsx
+│   │   │   ├── Nav.tsx
+│   │   │   ├── NewsletterForm.tsx
+│   │   │   ├── Register.tsx
 │   │   │   └── Section.tsx
 │   │   └── styles/
-│   │       └── layout.tsx
+│   │       ├── layout.tsx
 │   │       └── page.tsx
 ├── .eslintrc.json
 ├── .gitignore
 ├── .next-env.d.ts
-├── .env.local.example
+├── .env.local
 ├── .gitconfig
 ├── next.config.js
 ├── package-lock.json
