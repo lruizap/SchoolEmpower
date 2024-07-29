@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Styles
@@ -14,7 +17,29 @@ import FAQSection from "./components/FAQ/FAQSection";
 import NewsletterForm from "./components/NewsletterForm";
 import Footer from "./components/Footer";
 
+import RegisterModal from "./components/Register";
+import LoginModal from "./components/Login";
+
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+  const [showModalLogin, setShowModalLogin] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const openModalLogin = () => {
+    setShowModalLogin(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const closeModalLogin = () => {
+    setShowModalLogin(false);
+  };
+
   return (
     <body className="gird grid-cols justify-center items-center min-h-screen">
       {/* Background Images */}
@@ -39,6 +64,14 @@ export default function Home() {
       <header className="grid p-6">
         <Nav />
       </header>
+      <RegisterModal
+        showModal={showModal}
+        setShowModal={closeModal}
+      ></RegisterModal>
+      <LoginModal
+        showModal={showModalLogin}
+        setShowModal={closeModalLogin}
+      ></LoginModal>
 
       {/* Join Us */}
       <section
@@ -54,8 +87,12 @@ export default function Home() {
             Every day brings with it a fresh set of learning possibilities.
           </p>
           <div className="mt-4 space-x-4 space-y-4">
-            <Button label="Join Us"></Button>
-            <Button label="Learn More" background="transparent"></Button>
+            <Button onClick={openModal} label="Join Us"></Button>
+            <Button
+              onClick={openModalLogin}
+              label="Learn More"
+              background="transparent"
+            ></Button>
           </div>
         </div>
         <div className="w-full size-max justify-items-center items-center m-4">
