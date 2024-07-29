@@ -81,7 +81,7 @@ After all this, I finished creating the footer and finally, although I was not a
 
 These modals are included for future implementations for a backend. They are prepared with validations so there are no problems.
 
-Once this is done, the project is finished and uploaded to github and deployed it on github pages.
+Once this is done, the project is finished and uploaded to github.
 
 ## Project Structure
 
